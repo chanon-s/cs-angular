@@ -4,6 +4,7 @@
 
 export * from './lib/cs-component.module';
 
-export * from './lib/slide-pane/slide-pane.component';
+export * from './lib/cs-slide-pane/cs-slide-pane.component';
+export * from './lib/cs-toggle-switch/cs-toggle-switch.component';
 
-export * from './lib/service/tab-index.service';
+export * from './lib/service/cs-tab-index.service';

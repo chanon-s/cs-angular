@@ -3,7 +3,7 @@ import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
 import { AppComponent } from './app.component';
-import { CsComponentModule, SlidePaneComponent } from 'cs-component';
+import { CsComponentModule } from 'cs-component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({

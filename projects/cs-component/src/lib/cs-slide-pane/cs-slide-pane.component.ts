@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, EventEmitter, Output, ElementRef } from '@angular/core';
 import { trigger, transition, style, query, animate, state } from '@angular/animations';
 import { timer } from 'rxjs';
-import { CsTabIndexService } from '../service/tab-index.service';
+import { CsTabIndexService } from '../service/cs-tab-index.service';
 
 @Component({
   selector: 'cs-slide-pane',
-  templateUrl: './slide-pane.component.html',
-  styleUrls: ['./slide-pane.component.sass'],
+  templateUrl: './cs-slide-pane.component.html',
+  styleUrls: ['./cs-slide-pane.component.sass'],
   animations: [
     trigger('backdrop', [
       state('void', style({ opacity: 0 })),

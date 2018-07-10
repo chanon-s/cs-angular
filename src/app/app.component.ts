@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    timer(2000)
+    timer(1000)
       .subscribe(() => {
         this.pane.open();
       });

@@ -134,7 +134,7 @@
       "root": "projects/cs-component",
       "sourceRoot": "projects/cs-component/src",
       "projectType": "library",
-      "prefix": "cs",
+      "prefix": "",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "sass"
