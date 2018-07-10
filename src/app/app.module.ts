@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { CsComponentModule } from 'cs-component';
+import { NgModule, Injector } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 
 import { AppComponent } from './app.component';
+import { CsComponentModule, SlidePaneComponent } from 'cs-component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,18 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    CsComponentModule,
+    BrowserAnimationsModule,
+    CsComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private injector: Injector) {
+  }
+
+  ngDoBootstrap() {
+  }
+
+}

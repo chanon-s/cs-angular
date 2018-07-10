@@ -1,0 +1,68 @@
+\:host
+
+  .wrapper
+    top: 0
+    position: absolute
+    height: calc(100% - 0px)
+    width: 100%
+    overflow: hidden
+
+    &.pane-align-left
+      left: 0
+    &.pane-align-right
+      right: 0
+
+      .slide-pane
+        margin-left: auto
+
+    .slide-pane
+      height: 100%
+      width: calc(100% - 20px)
+      overflow: visible
+
+      .slide-pane-container
+        background: white
+        position: relative
+        width: 100%
+        height: 100%
+
+        .pane-header
+          height: 41px
+          padding-top: 1px
+          background-color: #f3f3f3
+          padding: .55rem 15px
+          position: relative
+
+          .pane-header-button
+            position: absolute
+            top: 1px
+            right: 0
+            height: 40px
+            border: none
+            background: #ddd
+            padding-bottom: 5px
+
+            .button-done, 
+            .button-dismiss
+              width: 50px
+              height: 40px
+              font-weight: 700
+              text-shadow: 0 1px 0 #fff
+              border-width: 0
+              font-size: 1.1rem
+              border-left: 1px solid #ccc
+
+        .pane-body
+          height: calc(100% - 40px)
+          width: 100%
+          overflow: auto
+          padding: 15px
+          text-align: left
+
+  .backdrop
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .1)

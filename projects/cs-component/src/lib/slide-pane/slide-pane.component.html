@@ -1,0 +1,25 @@
+<div class="backdrop" *ngIf="backdrop && isOpen" [@backdrop]></div>
+<div class="wrapper" *ngIf="isOpen" [style.maxWidth]="maxWidth" [style.height]="height" [@wrapper] [class.pane-align-left]="ltr"
+  [class.pane-align-right]="rtl">
+  <div class="slide-pane">
+    <div class="slide-pane-container shadow-sm" [class.slide-ltr]="ltr" [class.slide-rtl]="rtl" [class.border-right]="ltr"
+      [class.border-left]="rtl">
+
+      <div class="pane-header border-bottom text-left">
+        <b>{{label}}</b>
+        <div class="pane-header-button" *ngIf="!noAction">
+          <button class="button-done btn btn-outline-primary" type="button" aria-label="Done" (click)="done()" *ngIf="onDone.observers.length > 0" title="ตกลง">
+            <span aria-hidden="true">&#10003;</span>
+          </button>
+          <button class="button-dismiss btn btn-outline-danger" type="button" aria-label="Dismiss" (click)="dismiss()" title="ปิด">
+            <span aria-hidden="true">&#10007;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pane-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
